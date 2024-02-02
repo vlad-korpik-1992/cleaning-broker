@@ -22,13 +22,13 @@
                         </a>
                         <ul class="menu__list">
                             <li class="menu__list__items">
-                                <a class="menu__link" href="#about">About</a>
+                                <a class="menu__link menu--scroll" href="#about">About</a>
                             </li>
                             <li class="menu__list__items">
-                                <a class="menu__link" href="#work">How it works?</a>
+                                <a class="menu__link menu--scroll" href="#work">How it works?</a>
                             </li>
                             <li class="menu__list__items">
-                                <a class="menu__link" href="#contacts">Contact us</a>
+                                <a class="menu__link menu--scroll" href="#contacts">Contact us</a>
                             </li>
                         </ul>
                     </nav>
@@ -46,15 +46,15 @@
             </div>
         </div>
     </section>
-    <section class="work">
+    <section class="work" id="about">
         <div class="wrapper">
             <div class="work__box">
                 <div class="work__box__items">
                     <div class="work__box__video">
                         <h2 class="section-title">How it works?</h2>
                         <p>Watch our 30 second tutorial!</p>
-                        <a class="work__link" href="#">
-                            <div class="work__link__btn"></div>
+                        <a class="work__link" href="#" onclick="openVideoModal(event)" data-link = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/a_FSfzQ2IW4?si=iwWQxv2o2y9unhaC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'>
+                            <div class="work__link__btn" data-link = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/a_FSfzQ2IW4?si=iwWQxv2o2y9unhaC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'></div>
                         </a>
                     </div>
                 </div>
@@ -68,10 +68,149 @@
             </div>
         </div>
     </section>
-    <section class="features">
+    <section class="features" id="work">
         <div class="wrapper">
             <div class="features__head">
                 <h2 class="section-title">We only work with registered <span>professional cleaning</span> companies!</h2>
+            </div>
+            <div class="features__box">
+                <div class="features__box__items">
+                    <h2 class="section-title">We <span>evaluate</span> all of the cleaning companies for you! </h2>
+                    <p>We have developed a thourough vetting system to match you with a perfect cleaning company, tailored exactly to your needs! Feel free to read about each criteria.</p>
+                </div>
+                <div class="features__box__items">
+                    <div class="features__tabs">
+                        <div class="features__tabs__items">
+                            <button class="features__tabs__items__btn">Customer Reviews</button>
+                            <div class="features__tabs__items__content">
+                                <p>We evaluate all the reviews across all the platform (social media, search engines, rating portals etc.) to make sure you only work with best in the business.</p>
+                            </div>
+                        </div>
+                        <div class="features__tabs__items">
+                            <button class="features__tabs__items__btn">Office & Location</button>
+                            <div class="features__tabs__items__content">
+                                <p>We ensure all our partners have a physical location and staff to address any concerns you might have.</p>
+                            </div>
+                        </div>
+                        <div class="features__tabs__items">
+                            <button class="features__tabs__items__btn">Response Time</button>
+                            <div class="features__tabs__items__content">
+                                <p>We guarantee that every request will be answered by our partners in timely and professional manner.</p>
+                            </div>
+                        </div>
+                        <div class="features__tabs__items">
+                            <button class="features__tabs__items__btn">Time in the business</button>
+                            <div class="features__tabs__items__content">
+                                <p>We work the the companies that have been tested by time in the business and a chance to proove why they are the best.</p>
+                            </div>
+                        </div>
+                        <div class="features__tabs__items">
+                            <button class="features__tabs__items__btn">Pricing Competitiveness</button>
+                            <div class="features__tabs__items__content">
+                                <p>We compare the pricing to the industry standards and make certain you are getting fair market prices for the best possible quality.</p>
+                            </div>
+                        </div>
+                        <div class="features__tabs__items">
+                            <button class="features__tabs__items__btn">Interview with the owner</button>
+                            <div class="features__tabs__items__content">
+                                <p>Before adding a company to the list of our trusted partners, we sit down and have a chat with the owner to make sure we and you, know who is the person in charge.</p>
+                            </div>
+                        </div>
+                        <div class="features__tabs__items">
+                            <button class="features__tabs__items__btn">Quality of Equipment & Supplie</button>
+                            <div class="features__tabs__items__content">
+                                <p>When you work with our partners, you can be sure they only professional tools and equipment will be used for every job!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="priority">
+        <div class="wrapper">
+            <div class="priority__head">
+                <h2 class="section-title">Lets ﬁnd a <span>match</span> based on <span>your priorities</span>!</h2>
+            </div>
+            <div class="priority__box">
+                <img loading="lazy" src="img/priority.jpg" alt="Cleaning Broker">
+            </div>
+        </div>
+    </section>
+    <section class="fantastic" id="contacts">
+        <div class="wrapper">
+            <div class="fantastic__box">
+                <div class="fantastic__box__items">
+                    <div class="fantastic__box__inner">
+                        <h2 class="section-title"><span>Fantastic!</span> Your cleaning company match will be in touch shortly!</h2>
+                        <a class="fantastic__box__link" href="#" onclick="openContactModal(event)">Contact us</a>
+                    </div>
+                </div>
+                <div class="fantastic__box__items">
+                    <img loading="lazy" class="fantastic__img" src="img/fantastic.png" alt="Cleaning Broker">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__box">
+                <img class="logo" src="img/logo.svg" alt="Cleaning Broker">
+                <p class="copy">COPYRIGHT (C) CLEANING BROKER LTD. <script>
+                    var mdate = new Date();
+                    document.write(mdate.getFullYear());
+                </script></p>
+                <ul class="footer__menu">
+                    <li>
+                        <a class="footer__menu__link menu--scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="footer__menu__link menu--scroll" href="#work">How it  works?</a>
+                    </li>
+                    <li>
+                        <a class="footer__menu__link menu--scroll" href="#contacts">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <section class="modal-video">
+        <div class="wrapper">
+            <a class="modal-video__link" href="" onclick="closeVideoModal(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+            </a>
+            <div class="modal-video__content">
+                <div class="modal-video__content__item" id="video-content"></div>
+            </div>
+        </div>
+    </section>
+    <section class="modal-video modal-contact">
+        <div class="wrapper">
+            <a class="modal-video__link" href="" onclick="closeContactModal(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+            </a>
+            <div class="modal__form">
+                <div class="modal__form__box">
+                    <h6>Please fill out <span>the form</span>:</h6>
+                    <form class="contact__form" action="#">
+                        <div class="contact__form__items">
+                            <label class="contact__form__label" for="firstname">Name</label>
+                            <input class="contact__form__input" type="text" name="firstname" id="firstname" required>
+                        </div>
+                        <div class="contact__form__items">
+                            <label class="contact__form__label" for="phone">Phone</label>
+                            <input class="contact__form__input" type="tel" inputmode="tel" name="phone" id="phone" required>
+                        </div>
+                        <div class="contact__form__items">
+                            <label class="contact__form__label" for="email">Email</label>
+                            <input class="contact__form__input" type="tel" inputmode="tel" name="email" id="email" required>
+                        </div>
+                        <div class="form--error form--error--warning"></div>
+                        <div class="contact__form__items">
+                            <button class="contact__form__btn" type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
