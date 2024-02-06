@@ -682,6 +682,10 @@ section {
     color: #ff0000;
 }
 
+.quiz{
+    scroll-margin-top: 5rem;
+}
+
 .quiz__box {
     display: grid;
     transform: translate3d(-9999px, 0px, 0px);

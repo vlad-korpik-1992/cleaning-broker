@@ -221,20 +221,26 @@ function nextSliderFour(event) {
       data.append('files[]', document.getElementById('files').files[i]);
     }
   }
-  questionAnswer = questionAnswer + ' Square footage: ' + square + '<br/>';
-  questionAnswer = questionAnswer + ' Bedrooms: ' + bedrooms + '<br/>';
-  questionAnswer = questionAnswer + ' Bathrooms: ' + bathrooms + '<br/>';
-  questionAnswer = questionAnswer + ' Exterior floors: ' + floors + '<br/>';
-  for (let i = 0; i < checkboxes.length; i++) {
-    if (checkboxes[i].checked === true) {
-      answers = answers + checkboxes[i].value + "|";
+  if (date != '') {
+    questionAnswer = questionAnswer + ' Square footage: ' + square + '<br/>';
+    questionAnswer = questionAnswer + ' Bedrooms: ' + bedrooms + '<br/>';
+    questionAnswer = questionAnswer + ' Bathrooms: ' + bathrooms + '<br/>';
+    questionAnswer = questionAnswer + ' Exterior floors: ' + floors + '<br/>';
+    for (let i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked === true) {
+        answers = answers + checkboxes[i].value + "|";
+      }
     }
+    questionAnswer = questionAnswer + ' Options: ' + answers + '<br/>';
+    questionAnswer = questionAnswer + ' Desired date of cleaning: ' + date + '<br/>';
+    data.append('answer', questionAnswer);
+    slider.classList.remove('quiz__box--active');
+    sliderNext.classList.add('quiz__box--active');
   }
-  questionAnswer = questionAnswer + ' Options: ' + answers + '<br/>';
-  questionAnswer = questionAnswer + ' Desired date of cleaning: ' + date + '<br/>';
-  data.append('answer', questionAnswer);
-  slider.classList.remove('quiz__box--active');
-  sliderNext.classList.add('quiz__box--active');
+  else {
+      document.querySelector('#quiz__date__error').textContent = "Please specify the desired cleaning date";
+      return false;
+  }
 }
 
 function nextSliderFive(event) {
@@ -275,27 +281,27 @@ $(document).ready(function () {
     x = document.querySelector('[name="name-quiz"').value;
     console.log(x);
     if (x === "") {
-      document.querySelector('.quiz__form__error').textContent = "Please enter your name";
+      document.querySelector('#quiz__form__error').textContent = "Please enter your name";
       return false;
     }
     x = document.querySelector('[name="address-quiz"').value;
     if (x === "") {
-      document.querySelector('.quiz__form__error').textContent = "Please provide your address";
+      document.querySelector('#quiz__form__error').textContent = "Please provide your address";
       return false;
     }
     x = document.querySelector('[name="phone-quiz"').value;
     if (x === "") {
-      document.querySelector('.quiz__form__error').textContent = "Please give me your phone number";
+      document.querySelector('#quiz__form__error').textContent = "Please give me your phone number";
       return false;
     }
     x = document.querySelector('[name="email-quiz"').value;
     if (x === "") {
-      document.querySelector('.quiz__form__error').textContent = "Please enter your E-mail";
+      document.querySelector('#quiz__form__error').textContent = "Please enter your E-mail";
       return false;
     } else {
       let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (!re.test(x)) {
-        document.querySelector('.quiz__form__error').textContent = "Incorrect E-mail";
+        document.querySelector('#quiz__form__error').textContent = "Incorrect E-mail";
         return false;
       }
     }
