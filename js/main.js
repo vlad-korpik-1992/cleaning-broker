@@ -249,6 +249,25 @@ function nextSliderFive(event) {
   sliderNext.classList.add('quiz__box--active');
 }
 
+/* File selection */
+
+let fields = document.querySelectorAll('.quiz__file');
+Array.prototype.forEach.call(fields, function (input) {
+  let label = input.nextElementSibling,
+    labelVal = label.querySelector('.quiz__file-fake').innerText;
+
+  input.addEventListener('change', function (e) {
+    let countFiles = '';
+    if (this.files && this.files.length >= 1)
+      countFiles = this.files.length;
+
+    if (countFiles)
+      label.querySelector('.quiz__file-fake').innerText = 'Selected files: ' + countFiles;
+    else
+      label.querySelector('.quiz__file-fake').innerText = labelVal;
+  });
+});
+
 /* Ajax Quiz Send*/
 $(document).ready(function () {
   $('#quiz-send').click(function (e) {
