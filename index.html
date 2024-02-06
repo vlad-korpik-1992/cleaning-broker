@@ -34,7 +34,7 @@
                     </nav>
                 </div>
                 <div class="header__box__items">
-                    <a class="header__btn" href="">Get started</a>
+                    <a class="header__btn" href="#quiz">Get started</a>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                     <div class="work__box__inner">
                         <h2 class="section-title">We will do it for you <br> <span>for free!</span></h2>
                         <p>You read that right, for free!</p>
-                        <a class="work__box__inner__link" href="#">Get started</a>
+                        <a class="work__box__inner__link" href="#quiz">Get started</a>
                     </div>
                 </div>
             </div>
@@ -137,6 +137,253 @@
             </div>
         </div>
     </section>
+    <section class="quiz" id="quiz">
+        <div class="wrapper">
+            <div class="quiz__box quiz__box--first quiz__box--active">
+                <div class="quiz__inner">
+                    <div class="quiz__inner__items">
+                        <h2 class="section-title">Are you interested in <span>Residential</span> or <span>Cleaning?</span></h2>
+                    </div>
+                    <div class="quiz__inner__items">
+                        <div class="quiz__inner__colums">
+                            <div class="quiz__inner__colums__items">
+                                <button class="quiz__inner__colums__btn" onclick="nextSliderResidental(event)">RESIDENTIAL</button>
+                                <p>House, Duplex, Apartment, Condo, etc.</p>
+                            </div>
+                            <div class="quiz__inner__colums__items">
+                                <button class="quiz__inner__colums__btn" onclick="nextSliderCommercial(event)">COMMERCIAL</button>
+                                <p>Ofﬁce, Warehouse, Storage Facility, Condo Building, Etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__footer">
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items"></div>
+                    <div class="quiz__footer__items"></div>
+                    <div class="quiz__footer__items"></div>
+                    <div class="quiz__footer__items"></div>
+                </div>
+            </div>
+            <div class="quiz__box quiz__box--second">
+                <div class="quiz__inner">
+                    <div class="quiz__inner__items">
+                        <h2 class="section-title">What <span>services</span> are you currently interested in?</h2>
+                        <p>Services can be adjusted later according to your needs you with a perfect cleaning company, tailored exactly to your needs!</p>
+                    </div>
+                    <div class="quiz__inner__items">
+                        <div class="quiz__inner__radiobuttons">
+                            <div class="quiz__inner__radiobuttons__items">
+                                <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer1[]" id="answerSecond1" value="REGULAR HOUSE CLEANING">
+                                <label class="quiz__inner__radiobuttons__items__label" for="answerSecond1">REGULAR HOUSE CLEANING</label>
+                            </div>
+                            <div class="quiz__inner__radiobuttons__items">
+                                <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer1[]" id="answerSecond2" value="ONE TIME DEEP HOUSE CLEANING">
+                                <label class="quiz__inner__radiobuttons__items__label" for="answerSecond2">ONE TIME DEEP HOUSE CLEANING</label>
+                            </div>
+                            <div class="quiz__inner__radiobuttons__items">
+                                <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer1[]" id="answerSecond3" value="MOVE IN / MOVE OUT CLEANING">
+                                <label class="quiz__inner__radiobuttons__items__label" for="answerSecond3">MOVE IN / MOVE OUT CLEANING</label>
+                            </div>
+                            <div class="quiz__inner__radiobuttons__items">
+                                <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer1[]" id="answerSecond4" value="WINDOW CLEANING">
+                                <label class="quiz__inner__radiobuttons__items__label" for="answerSecond4">WINDOW CLEANING</label>
+                            </div>
+                            <div class="quiz__inner__radiobuttons__items">
+                                <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer1[]" id="answerSecond5" value="GUTTER CLEANING">
+                                <label class="quiz__inner__radiobuttons__items__label" for="answerSecond5">GUTTER CLEANING</label>
+                            </div>
+                            <div class="quiz__inner__radiobuttons__items">
+                                <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer1[]" id="answerSecond6" value="PRESSURE CLEANING">
+                                <label class="quiz__inner__radiobuttons__items__label" for="answerSecond6">PRESSURE CLEANING</label>
+                            </div>
+                            <div class="quiz__inner__radiobuttons__items">
+                                <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer1[]" id="answerSecond7" value="CARPET CLEANING">
+                                <label class="quiz__inner__radiobuttons__items__label" for="answerSecond7">CARPET CLEANING</label>
+                            </div>
+                        </div>
+                        <button class="quiz__inner__btn" onclick="nextSliderThird(event)">NEXT</button>
+                    </div>
+                </div>
+                <div class="quiz__footer">
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items"></div>
+                    <div class="quiz__footer__items"></div>
+                    <div class="quiz__footer__items"></div>
+                </div>
+            </div>
+            <div class="quiz__box quiz__box--third">
+                <div class="quiz__inner">
+                    <div class="quiz__inner__items">
+                        <h2 class="section-title">Please provide a little more detail about <span>your home</span></h2>
+                    </div>
+                    <div class="quiz__inner__items">
+                        <div class="quiz__inner__column">
+                            <div class="quiz__inner__colimn__items">
+                                <label class="quiz__inner__column__label" id="square">Square footage</label>
+                                <input type="number" name="square" id="square" class="quiz__inner__column__input" min="0" value="0" placeholder="0">
+                                <div class="quiz__inner__column__items__row">
+                                    <div class="quiz__inner__column__items__row__inline">
+                                        <label class="quiz__inner__column__label" id="bedrooms">Bedrooms</label>
+                                        <select name="bedrooms" id="bedrooms" class="quiz__inner__column__input">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="quiz__inner__column__items__row__inline">
+                                        <label class="quiz__inner__column__label" id="bathrooms">Bathrooms</label>
+                                        <select name="bathrooms" id="bathrooms" class="quiz__inner__column__input">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="quiz__inner__column__items__row__inline">
+                                        <label class="quiz__inner__column__label" id="floors">Exterior floors</label>
+                                        <select name="floors" id="floors" class="quiz__inner__column__input">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__inner__colimn__items">
+                                <div class="quiz__inner__column__items__row">
+                                    <div class="quiz__inner__radiobuttons__items">
+                                        <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer3[]" id="answerThird1" value="Walkout">
+                                        <label class="quiz__inner__radiobuttons__items__label" for="answerThird1">Walkout</label>
+                                    </div>
+                                    <div class="quiz__inner__radiobuttons__items">
+                                        <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer3[]" id="answerThird2" value="Pets">
+                                        <label class="quiz__inner__radiobuttons__items__label" for="answerThird2">Pets</label>
+                                    </div>
+                                    <div class="quiz__inner__radiobuttons__items">
+                                        <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer3[]" id="answerThird3" value="Water connetions">
+                                        <label class="quiz__inner__radiobuttons__items__label" for="answerThird3">Water connetions</label>
+                                    </div>
+                                    <div class="quiz__inner__radiobuttons__items">
+                                        <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer3[]" id="answerThird4" value="Cleaned last morethan a month ago?">
+                                        <label class="quiz__inner__radiobuttons__items__label" for="answerThird4">Cleaned last morethan a month ago?</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__inner__colimn__items">
+                                <label class="quiz__inner__column__label" id="date">Desired date of cleaning</label>
+                                <input type="date" name="date" id="date" class="quiz__inner__column__input" placeholder="0">
+                            </div>
+                            <div class="quiz__inner__colimn__items">
+                                <div class="quiz__inner__column__items__row quiz__inner__column__items__row--pt0">
+                                    <input class="quiz__file" type="file" name="files[]" id="files" multiple="">
+                                    <label class="quiz__file__btn" for="files">
+                                        <div class="quiz__file-fake">
+                                            <svg width="16.666626" height="26.666504" viewBox="0 0 16.6666 26.6665" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path id="Vector" d="M16.6666 18.3335C16.6666 20.6445 15.8556 22.6113 14.2333 24.2334C12.6111 25.8555 10.6444 26.6665 8.33337 26.6665C6.02222 26.6665 4.05554 25.8555 2.43335 24.2334C0.811157 22.6113 0 20.6445 0 18.3335L0 6C0 4.3335 0.583374 2.9165 1.75 1.75C2.91663 0.583496 4.33337 0 6 0C7.66663 0 9.08337 0.583496 10.25 1.75C11.4166 2.9165 12 4.3335 12 6L12 17.6665C12 18.689 11.6444 19.5557 10.9333 20.2666C10.2222 20.9775 9.35559 21.3335 8.33337 21.3335C7.31116 21.3335 6.44446 20.9775 5.73328 20.2666C5.02222 19.5557 4.66663 18.689 4.66663 17.6665L4.66663 5.3335L7.33337 5.3335L7.33337 17.6665C7.33337 17.9556 7.42773 18.1943 7.6167 18.3833C7.80554 18.5723 8.04443 18.6665 8.33337 18.6665C8.62219 18.6665 8.86108 18.5723 9.05005 18.3833C9.23889 18.1943 9.33337 17.9556 9.33337 17.6665L9.33337 6C9.31116 5.06689 8.98328 4.27783 8.34998 3.6333C7.71667 2.98877 6.93335 2.6665 6 2.6665C5.06665 2.6665 4.27783 2.98877 3.6333 3.6333C2.98889 4.27783 2.66663 5.06689 2.66663 6L2.66663 18.3335C2.64441 19.9111 3.18884 21.25 4.30005 22.3501C5.41113 23.4502 6.75562 24 8.33337 24C9.88892 24 11.2111 23.4502 12.3 22.3501C13.3889 21.25 13.9556 19.9111 14 18.3335L14 5.3335L16.6666 5.3335L16.6666 18.3335Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                            </svg>                                            
+                                            <p>UPLOAD</p>
+                                        </div>
+                                    </label>
+                                    <div class="file__danger" id="files__status">Attach photos here of items you need to dispose</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="quiz__inner__btn" onclick="nextSliderFour(event)">NEXT</button>
+                    </div>
+                </div>
+                <div class="quiz__footer">
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items"></div>
+                    <div class="quiz__footer__items"></div>
+                </div>
+            </div>
+            <div class="quiz__box quiz__box--four">
+                <div class="quiz__inner">
+                    <div class="quiz__inner__items">
+                        <h2 class="section-title">Its there anything else you would like <span>us to know?</span></h2>
+                    </div>
+                    <div class="quiz__inner__items">
+                        <div class="quiz__inner__column">
+                            <p>Do you have any additional information or any special requests for us?</p>
+                            <textarea class="quiz__inner__column__textarea" name="message" id="message"  placeholder="Type your request here..."></textarea>
+                        </div>
+                        <button class="quiz__inner__btn" onclick="nextSliderFive(event)">NEXT</button>
+                    </div>
+                </div>
+                <div class="quiz__footer">
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items"></div>
+                </div>
+            </div>
+            <div class="quiz__box quiz__box--five">
+                <div class="quiz__inner">
+                    <div class="quiz__inner__items">
+                        <h2 class="section-title">Lets get your <span>contact information</span> so that we can get in touch!</h2>
+                    </div>
+                    <form action="" class="quiz__inner__items quiz__inner__items--grid" id="quiz__inner__items--grid">
+                        <div class="quiz__inner__colimn__items">
+                            <label class="quiz__inner__column__label" id="name-quiz">Name</label>
+                            <input type="text" name="name-quiz" id="name-quiz" class="quiz__inner__column__input" value="" required>
+                        </div>
+                        <div class="quiz__inner__colimn__items">
+                            <label class="quiz__inner__column__label" id="address-quiz">Address</label>
+                            <input type="text" name="address-quiz" id="address-quiz" class="quiz__inner__column__input" value="" required>
+                        </div>
+                        <div class="quiz__inner__colimn__items">
+                            <label class="quiz__inner__column__label" id="phone-quiz">Phone</label>
+                            <input type="text" name="phone-quiz" id="phon-quize" class="quiz__inner__column__input" value="" required>
+                        </div>
+                        <div class="quiz__inner__colimn__items">
+                            <label class="quiz__inner__column__label" id="email-quiz">Email</label>
+                            <input type="email" name="email-quiz" id="email-quiz" class="quiz__inner__column__input" value="" required>
+                        </div>
+                        <div class="quiz__inner__colimn__items">
+                            <p>What is your preferred way of contact?</p>
+                        </div>
+                        <div class="quiz__inner__colimn__items">
+                            <div class="quiz__inner__column__items__row">
+                                <div class="quiz__inner__radiobuttons__items">
+                                    <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer5[]" id="answerFive1" value="Phone">
+                                    <label class="quiz__inner__radiobuttons__items__label" for="answerFive1">Phone</label>
+                                </div>
+                                <div class="quiz__inner__radiobuttons__items">
+                                    <input class="quiz__inner__radiobuttons__items__input" type="checkbox" name="answer5[]" id="answerFive2" value="Email">
+                                    <label class="quiz__inner__radiobuttons__items__label" for="answerFive2">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz__form__error quiz__form__error--warning" id="quiz__form__error"></div>
+                        <button type="submit" class="quiz__inner__btn" id="quiz-send">SUBMIT</button>
+                    </form>
+                </div>
+                <div class="quiz__footer">
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                    <div class="quiz__footer__items quiz__footer__items--active"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="fantastic" id="contacts">
         <div class="wrapper">
             <div class="fantastic__box">
@@ -203,7 +450,7 @@
                         </div>
                         <div class="contact__form__items">
                             <label class="contact__form__label" for="email">Email</label>
-                            <input class="contact__form__input" type="tel" inputmode="tel" name="email" id="email" required>
+                            <input class="contact__form__input" name="email" id="email" required>
                         </div>
                         <div class="form--error form--error--warning"></div>
                         <div class="contact__form__items">
@@ -214,6 +461,7 @@
             </div>
         </div>
     </section>
+    <script defer src="js/jquery-3.7.1.min.js"></script>
     <script defer src="js/main.js"></script>
 </body>
 
